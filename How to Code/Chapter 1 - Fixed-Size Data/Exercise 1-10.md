@@ -50,12 +50,7 @@
 
 (define cat cat.image)
 
-(define (num-of-pixels image)
-  (string-append "Area = "
-                 (number->string (* (image-width image) (image-height image)))
-                 " pixels"))
-
-(num-of-pixels cat) ; "Area = 8775 pixels"
+(* (image-width cat) (image-height cat)) ; 8775
 ```
 
 <br/><br/>![image](https://user-images.githubusercontent.com/94638717/173208370-1a0672e1-4e5e-4c13-8beb-8393b729f7d8.png)
@@ -75,11 +70,8 @@
 
 (define cat cat.image)
 
-(define (tall-or-wide image)
-  (if (= (image-width image) (image-height image)) "square"
-      (if (> (image-width image) (image-height image)) "wide" "tall")))
-
-(tall-or-wide cat) ; "tall"
+(if (= (image-width cat) (image-height cat)) "square"
+      (if (> (image-width cat) (image-height cat)) "wide" "tall")) ; "tall"
 ```
 
 <br/><br/>![image](https://user-images.githubusercontent.com/94638717/173208991-63c9a9f2-109c-401d-acca-3534236779b7.png)
